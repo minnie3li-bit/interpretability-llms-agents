@@ -143,8 +143,7 @@ For further reading on the methods covered in this module:
 
 ## Getting Started
 
-1. From the **root of the repository**, create a virtual environment and install the
-   `xai-refresher` dependency group using `uv`:
+1. From the **root of the repository**, install the `xai-refresher` dependency group using `uv`:
 
    ```bash
    uv sync --group xai-refresher
@@ -152,6 +151,9 @@ For further reading on the methods covered in this module:
 
    This creates a `.venv` in the repo root and installs all packages needed for this module
    (PyTorch, SHAP, LIME, Grad-CAM, SAM, etc.).
+
+   > **Conflict note:** The `xai-refresher` group conflicts with both `mechanistic-interp` and
+   > `preference-alignment`. Do not install these groups together in the same environment.
 
 2. Activate the environment:
 

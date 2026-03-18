@@ -185,9 +185,11 @@ source .venv/bin/activate
 > **CUDA note:** `torch==2.6.0` from PyPI includes CUDA support on Linux. If you specifically need the CUDA 12.4 build, run:
 >
 > ```bash
-> uv sync --group ref4-llm-alignment-ethics \
+> uv sync --group preference-alignment \
 >   --index-url https://download.pytorch.org/whl/cu124 # Not required for Linux users, but may be needed for Windows users
 > ```
+>
+> **Conflict note:** The `preference-alignment` and `xai-refresher` groups cannot be installed together. Install only one at a time.
 
 ### Installing `flash-attn` (optional, for faster attention)
 

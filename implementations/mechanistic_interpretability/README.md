@@ -63,6 +63,24 @@ Key dependencies include:
 - **`transformers`, `accelerate`, `huggingface-hub`**: HuggingFace models + downloads (both tutorials)
 - **`torch`, `numpy`, `matplotlib`, `tqdm`, `pillow`, `requests`**: core runtime + plotting/utilities
 
+## Getting Started
+
+Run these commands from the **repo root**:
+
+```bash
+# 1. Install dependencies for this module
+uv sync --group mechanistic-interp
+
+# 2. Launch JupyterLab
+uv run jupyter lab implementations/mechanistic_interpretability/
+```
+
+Then open one of the notebooks listed above and run the cells in order.
+
+> **Note:** Do not install the `mechanistic-interp` and `xai-refresher` dependency groups
+> together — they conflict. See the Troubleshooting section if you hit an `ImportError`
+> about `datasets`.
+
 ## Troubleshooting
 
 `ImportError: cannot import name '__version__' from 'datasets' (unknown location)`
@@ -96,20 +114,3 @@ Pointers for the main tools and ideas used here:
 - **Logit lens for VLMs (MMNeuron)**: `https://arxiv.org/abs/2406.11193`
 - **VLM interpretability survey (ICLR blog, 2025)**: `https://d2jud02ci9yv69.cloudfront.net/2025-04-28-vlm-understanding-29/blog/vlm-understanding/`
 
-## Getting Started
-
-Run these commands from the **repo root**:
-
-```bash
-# 1. Install dependencies for this module
-uv sync --group mechanistic-interp
-
-# 2. Launch JupyterLab
-uv run jupyter lab implementations/mechanistic_interpretability/
-```
-
-Then open one of the notebooks listed above and run the cells in order.
-
-> **Note:** Do not install the `mechanistic-interp` and `xai-refresher` dependency groups
-> together — they conflict. See the Troubleshooting section if you hit an `ImportError`
-> about `datasets`.

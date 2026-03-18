@@ -95,38 +95,14 @@ sudo apt update
 sudo apt install ffmpeg
 ```
 
-### A. Ref5 – Video RAG (Retrieval)
-
-Used for:
-
-* Segment embedding
-* Cross-modal similarity search
-* Top-k retrieval
-
-From the **root of the repository**:
+Both the retrieval (RAG) and QA (inference) pipelines use the same dependency group. From the **root of the repository**:
 
 ```bash
 uv sync --group multimedia-rag
 source .venv/bin/activate
 ```
 
----
-
-### B. Ref5 – Video QA (Inference)
-
-Used for:
-
-* Qwen Omni multimodal reasoning
-* Answer generation over retrieved segments
-
-From the **root of the repository**:
-
-```bash
-uv sync --group multimedia-rag
-source .venv/bin/activate
-```
-
-> **Note:** The two groups are mutually exclusive — switch between them by re-running `uv sync --group <name>` as needed.
+This installs everything needed for both the Video RAG (ImageBind embedding + retrieval) and Video QA (Qwen Omni inference) notebooks.
 
 ---
 
