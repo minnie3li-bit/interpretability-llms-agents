@@ -169,24 +169,7 @@ No manual setup is needed — just run the notebook cells in order.
 
 Feature extraction from LLaVA is GPU-intensive and time-consuming. Pre-computed `.pth` files are available from GCP so you can skip directly to the decomposition and analysis steps.
 
-#### 1) Authenticate with GCP
-
-```bash
-gcloud auth login
-gcloud auth application-default login
-# When prompted, enter the email you used to log into the coder platform.
-# A browser window will open for Google sign-in. After signing in, you will receive a code.
-# Copy that code back into the terminal to complete authentication.
-gcloud config set account YOUR_EMAIL
-```
-
-Verify active account:
-
-```bash
-gcloud auth list
-```
-
-#### 2) Download Pre-computed Results
+#### 1) Download Pre-computed Results
 
 ```bash
 cd implementations/xai_refresher
@@ -194,7 +177,7 @@ gcloud storage cp gs://interp-bootcamp-data/xai_refresher/results.zip .
 unzip results.zip
 ```
 
-#### 3) Cleanup temporary files
+#### 2) Cleanup temporary files
 
 ```bash
 rm -f __MACOSX results.zip .DS_Store

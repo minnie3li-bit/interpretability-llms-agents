@@ -65,24 +65,7 @@ If you prefer to download them individually:
 
 The media dataset is hosted in a GCP bucket.
 
-#### 1) Authenticate with GCP
-
-```bash
-gcloud auth login
-gcloud auth application-default login
-# When prompted, enter the email you used to log into the coder platform.
-# A browser window will open for Google sign-in. After signing in, you will receive a code.
-# Copy that code back into the terminal to complete authentication.
-gcloud config set account YOUR_EMAIL
-```
-
-Verify active account:
-
-```bash
-gcloud auth list
-```
-
-#### 2) Download Dataset
+#### 1) Download Dataset
 
 ```bash
 cd implementations/multimedia_rag
@@ -92,7 +75,7 @@ unzip data.zip
 
 Files are placed correctly after extraction — no manual reorganisation needed.
 
-#### 3) Cleanup temporary files
+#### 2) Cleanup temporary files
 
 ```bash
 rm -f __MACOSX data.zip data/.DS_Store

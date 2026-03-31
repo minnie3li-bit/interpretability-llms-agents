@@ -80,24 +80,7 @@ The filtered `.parquet` files are hosted in a GCP bucket and downloaded separate
 
 The filtered dataset used in this implementation is hosted in a GCP bucket.
 
-#### 1) Authenticate with GCP
-
-```bash
-gcloud auth login
-gcloud auth application-default login
-# When prompted, enter the email you used to log into the coder platform.
-# A browser window will open for Google sign-in. After signing in, you will receive a code.
-# Copy that code back into the terminal to complete authentication.
-gcloud config set account YOUR_EMAIL
-```
-
-Verify active account:
-
-```bash
-gcloud auth list
-```
-
-#### 2) Download Dataset
+#### 1) Download Dataset
 
 ```bash
 cd implementations/preference_alignment
@@ -111,7 +94,7 @@ The zip extracts a `data/` folder. Move its contents up and remove the wrapper:
 mv data/data_sky . && mv data/data_hh_rlhf . && rm -rf data
 ```
 
-#### 3) Cleanup temporary files
+#### 2) Cleanup temporary files
 
 ```bash
 rm -rf __MACOSX data.zip .DS_Store
