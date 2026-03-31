@@ -50,10 +50,11 @@ recent research, with fully reproducible notebooks and evaluation pipelines.
    | ------- | ----------- | ----------------- |
    | XAI Refresher | `xai-refresher` | `uv sync --group xai-refresher` |
    | Bias & Fairness Analysis | None | `uv sync` |
+   | Mechanistic Interpretability | `mechanistic-interp` | `uv sync --group mechanistic-interp` |
    | Preference Alignment (DPO) | `preference-alignment` | `uv sync --group preference-alignment` |
    | Multimedia RAG | `multimedia-rag` | `uv sync --group multimedia-rag` |
    | Agentic ChartQA Eval | `agentic-xai-eval` | `uv sync --group agentic-xai-eval` |
-   | Mechanistic Interpretability | `mechanistic-interp` | `uv sync --group mechanistic-interp` |
+
 
    > **Conflict note:** The `mechanistic-interp` and `xai-refresher` groups cannot be installed
    > together — they have conflicting `datasets` package requirements. Install only one at a time.
